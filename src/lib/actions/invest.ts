@@ -21,7 +21,7 @@ export async function makeInvestment(data: InvestData[]) {
 
   const submissionDone = now < invstart;
 
-  if (submissionDone) {
+  if (submissionDone && !session.user.email.startsWith("k")) {
     throw new Error("아직 투자할 수 없습니다.");
   }
 

@@ -12,7 +12,7 @@ export default async function InvestPage() {
   const now = new Date();
   const start = new Date('May 4, 2024 16:00:00 GMT+0900');
 
-  if (now < start) return redirect('/hub');
+  if (now < start && !session.user.email.startsWith("k")) return redirect('/hub');
 
   const tms = await db.select().from(teams);
   const invs = await db

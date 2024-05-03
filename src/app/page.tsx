@@ -4,6 +4,7 @@ import LineBackground from '@/components/background';
 import { AuthSession } from '@/lib/auth';
 import { signOut, useSession } from 'next-auth/react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function MainPage() {
   const session = useSession();
@@ -11,6 +12,15 @@ export default function MainPage() {
   return (
     <div className="h-screen w-screen flex items-center justify-center">
       <LineBackground />
+      <div className="m-4 w-[114px] h-[50px] absolute top-0 left-0">
+        <a href="https://www.netlify.com">
+          <Image
+            src="/netlify-color-accent.svg"
+            alt="Deploys by Netlify"
+            fill
+          />
+        </a>
+      </div>
       <div className="flex flex-col gap-4 text-center">
         <div className="text-4xl">
           안녕하세요,{' '}

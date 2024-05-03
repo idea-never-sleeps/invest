@@ -3,7 +3,7 @@
 import { AuthSession } from '@/lib/auth';
 import { teams as _teams, investments as _investments } from '@/lib/db/schema';
 import Image from 'next/image';
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Plus, Minus } from 'lucide-react';
 import toast from 'react-hot-toast';
 import { InvestData, makeInvestment } from '@/lib/actions/invest';
@@ -32,6 +32,15 @@ export default function InvestClient({
     (acc, inv) => acc + inv.amount,
     0
   );
+
+  useEffect(() => {
+    setCurrentInvestments(
+      investments.map((inv) => ({
+        team_id: inv.teamId,
+        amount: inv.amount
+      }))
+    );
+  }, [investments]);
 
   const handleSubmit = async () => {
     setSubmitting(true);
@@ -136,7 +145,7 @@ function TeamCard({
   return (
     <div className="p-4 flex flex-col gap-2 w-[350px] rounded-lg bg-[#f7f7f7]">
       <div className="font-semibold text-md">{team.name}</div>
-      <div className='text-sm'>{team.pdfUrl ? <Link className='underline' href={team.pdfUrl}>IR 보러 가기</Link> : 'IR이 존재하지 않습니다.'}</div>
+      <div className='text-sm'>{team.pdfUrl ? <Link className='underline' target='_blank' href={team.pdfUrl}>IR 보러 가기</Link> : 'IR이 존재하지 않습니다.'}</div>
       <div className="text-sm break-words">
         {!!team.itemDescription ? team.itemDescription : '설명이 없습니다.'}
       </div>

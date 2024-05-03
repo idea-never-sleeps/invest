@@ -6,6 +6,9 @@ declare global {
       AUTH_GOOGLE_SECRET: string;
       AUTH_SECRET: string;
       DATABASE_URL: string;
+      R2_ACCOUNT_ID: string;
+      R2_ACCESS_KEY: string;
+      R2_SECRET_ACCESS_KEY: string;
     }
   }
 }

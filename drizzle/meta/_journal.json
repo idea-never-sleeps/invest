@@ -1,0 +1,20 @@
+{
+  "version": "5",
+  "dialect": "pg",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1714664652765,
+      "tag": "0000_bizarre_zarek",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1714667347372,
+      "tag": "0001_parched_moondragon",
+      "breakpoints": true
+    }
+  ]
+}

@@ -17,12 +17,12 @@ export async function makeInvestment(data: InvestData[]) {
   }
 
   const now = new Date();
-  const subend = new Date('May 4, 2024 18:00:00 GMT+0900');
+  const invstart = new Date('May 4, 2024 16:00:00 GMT+0900');
 
-  const submissionDone = now > subend;
+  const submissionDone = now < invstart;
 
   if (submissionDone) {
-    throw new Error("Submission period is over");
+    throw new Error("아직 투자할 수 없습니다.");
   }
 
   // get user's team

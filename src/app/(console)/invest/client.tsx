@@ -137,7 +137,7 @@ function TeamCard({
     <div className="p-4 flex flex-col gap-2 w-[350px] rounded-lg bg-[#f7f7f7]">
       <div className="font-semibold text-md">{team.name}</div>
       <div className='text-sm'>{team.pdfUrl ? <Link className='underline' href={team.pdfUrl}>IR 보러 가기</Link> : 'IR이 존재하지 않습니다.'}</div>
-      <div className="text-sm">
+      <div className="text-sm break-words">
         {!!team.itemDescription ? team.itemDescription : '설명이 없습니다.'}
       </div>
       <div className="w-full flex items-center justify-end">

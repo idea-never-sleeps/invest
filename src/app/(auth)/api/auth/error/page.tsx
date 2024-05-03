@@ -1,5 +1,6 @@
 "use client";
 
+import LineBackground from "@/components/background";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 
@@ -21,9 +22,9 @@ export default function AuthError() {
 
   return (
     <div className="flex h-screen w-screen items-center justify-center">
+      <LineBackground />
       <div className="flex flex-col items-center gap-4">
-        <span className="text-9xl font-black opacity-40">오류</span>
-        <span>{errorMessage(params.error)}</span>
+        <span className="font-medium text-lg">{errorMessage(params.error)}</span>
         <Link href="/">
           <button>메인 화면으로 돌아가기</button>
         </Link>

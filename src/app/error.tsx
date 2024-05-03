@@ -21,7 +21,7 @@ const Container = styled.div`
   justify-content: center;
   height: 100vh;
   width: 100vw;
-  color: #ffffff;
+  color: #000000;
 `;
 
 const Text = styled.span`

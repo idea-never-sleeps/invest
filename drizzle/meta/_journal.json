@@ -15,6 +15,20 @@
       "when": 1714667347372,
       "tag": "0001_parched_moondragon",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1714758556732,
+      "tag": "0002_melted_doctor_doom",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1714760526765,
+      "tag": "0003_uneven_mauler",
+      "breakpoints": true
     }
   ]
 }

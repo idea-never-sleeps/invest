@@ -73,7 +73,7 @@ export const teams = pgTable("team", {
     .$defaultFn(() => crypto.randomUUID()),
   name: text("name").notNull(),
   itemDescription: text("itemDescription"),
-  imageUrl: text("imageUrl"),
+  pdfUrl: text("pdfUrl"),
   leaderId: text("leaderId")
     .notNull()
     .references(() => users.id, { onDelete: "cascade" }),
@@ -81,18 +81,4 @@ export const teams = pgTable("team", {
     .notNull()
     .references(() => users.id, { onDelete: "cascade" })
     .array(),
-});
-
-export const submissions = pgTable("submission", {
-  id: text("id")
-    .primaryKey()
-    .$defaultFn(() => crypto.randomUUID()),
-  teamId: text("teamId")
-    .notNull()
-    .references(() => teams.id, { onDelete: "cascade" }),
-  stage: integer("stage").notNull(),
-  url: text("url").notNull(),
-  createdAt: timestamp("createdAt", { mode: "date" })
-    .notNull()
-    .default(sql`now()`),
 });

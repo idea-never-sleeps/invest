@@ -61,6 +61,7 @@ export default function InvestClient({
         toast.error('투자에 실패했습니다. 다시 시도해 주세요.', { id: inv });
       }
     }
+    setSubmitting(false);
   };
 
   const onInvest = (teamId: string, amount: number) => {

@@ -5,7 +5,7 @@ import Link from 'next/link';
 export default async function HubPage() {
   const session = (await auth()) as AuthSession;
   const now = new Date();
-  const subend = new Date('May 4, 2024 10:45:00 GMT+0900');
+  const subend = new Date('May 4, 2024 12:00:00 GMT+0900');
   const invstart = new Date('May 4, 2024 16:00:00 GMT+0900');
 
   const submissionDone = now > subend;

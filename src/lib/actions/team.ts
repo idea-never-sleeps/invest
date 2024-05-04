@@ -17,7 +17,7 @@ export async function updateDescription(description: string) {
   }
 
   const now = new Date();
-  const end = new Date('May 4, 2024 10:45:00 GMT+0900');
+  const end = new Date('May 4, 2024 12:00:00 GMT+0900');
 
   if (now > end) {
     throw new Error('저장할 수 없습니다.');
@@ -65,7 +65,7 @@ export async function RequestIRUpload() {
   }
 
   const now = new Date();
-  const end = new Date('May 4, 2024 10:45:00 GMT+0900');
+  const end = new Date('May 4, 2024 12:00:00 GMT+0900');
 
   if (now > end) {
     throw new Error('저장할 수 없습니다.');

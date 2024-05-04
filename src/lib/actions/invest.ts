@@ -17,7 +17,7 @@ export async function makeInvestment(data: InvestData[]) {
   }
 
   const now = new Date();
-  const invstart = new Date('May 4, 2024 16:00:00 GMT+0900');
+  const invstart = new Date('May 2, 2024 16:00:00 GMT+0900');
 
   const submissionDone = now < invstart;
 

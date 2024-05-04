@@ -10,7 +10,7 @@ export default async function InvestPage() {
   if (!session) return redirect('/signin');
 
   const now = new Date();
-  const start = new Date('May 4, 2024 16:00:00 GMT+0900');
+  const start = new Date('May 2, 2024 16:00:00 GMT+0900');
 
   if (now < start && !session.user.email.startsWith("k")) return redirect('/hub');
 
